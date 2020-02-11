@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
 
-class VideoPembelajaranPage extends StatelessWidget {
+class VideoPembelajaranPage extends StatefulWidget {
   const VideoPembelajaranPage({Key key}) : super(key: key);
 
   @override
+  _VideoPembelajaranPageState createState() => _VideoPembelajaranPageState();
+}
+
+class _VideoPembelajaranPageState extends State<VideoPembelajaranPage> {
+  VideoPlayerController _videoController;
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Container(),
+    return Scaffold(
+      body: Row(
+        children: [
+
+        ],
+      ),
     );
   }
 }
