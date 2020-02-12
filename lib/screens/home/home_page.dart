@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar:appBar("EkoQuiz"),
+      appBar:appBar(context,"EkoQuiz",false),
       body: ListView(
         children: <Widget>[
           menuButton(0.3, "Pembelajaran", "/menu_pembelajaran", Colors.yellow[600], Icons.desktop_windows, context),

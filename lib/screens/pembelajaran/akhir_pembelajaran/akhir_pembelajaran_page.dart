@@ -1,3 +1,4 @@
+import 'package:eco_quiz/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class AkhirPembelajaranPage extends StatelessWidget {
@@ -5,8 +6,8 @@ class AkhirPembelajaranPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Container(),
+    return Scaffold(
+      body: Container(),
     );
   }
 }
