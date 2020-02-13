@@ -5,8 +5,15 @@ class TesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Container(),
+    return Scaffold(
+      backgroundColor: Colors.grey[400],
+      body: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            // border: 
+          ),
+        ),
+      ),
     );
   }
 }
