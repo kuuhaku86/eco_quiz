@@ -1,4 +1,5 @@
 int numTes,score;
+String tesName;
 
 List soalJawaban = [
   [

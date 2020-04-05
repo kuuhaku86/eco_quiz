@@ -35,17 +35,18 @@ class _VideoPembelajaranPageState extends State<VideoPembelajaranPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                currentVideo != 0 ? GestureDetector(
+                currentVideo > 0 ? GestureDetector(
                   child: Icon(
                     Icons.arrow_back_ios,
                     size: 0.1*height,
                   ),
                   onTap: () {
                     currentVideo--;
+                    _videoController.pause();
                     Navigator.of(context).popAndPushNamed("/video_pembelajaran");
                   },
                 ) : Container(
-                  width: 0.1*height,
+                  width:  0.1*height
                 ),
                 GestureDetector(
                   child: Icon(_videoController.value.isPlaying ? 
@@ -65,9 +66,11 @@ class _VideoPembelajaranPageState extends State<VideoPembelajaranPage> {
                   ),
                   onTap: () {
                     if(currentVideo == (listVideo[currentCourse].length - 1)) {
+                      _videoController.pause();
                       Navigator.of(context).popAndPushNamed("/akhir_pembelajaran");
                     } else {
                       currentVideo++;
+                      _videoController.pause();
                       Navigator.of(context).popAndPushNamed("/video_pembelajaran");
                     }
                   },
@@ -77,5 +80,12 @@ class _VideoPembelajaranPageState extends State<VideoPembelajaranPage> {
         ],
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _videoController.pause();
+    super.dispose();
+    _videoController.dispose();
   }
 }

@@ -14,6 +14,7 @@ Widget listCard(String name, String route, IconData icon, int videoNum, BuildCon
         currentVideo = 0;
         numTes = 0;
         score = 0;
+        tesName = name;
         Navigator.pushNamed(context, route);
       },
     ),

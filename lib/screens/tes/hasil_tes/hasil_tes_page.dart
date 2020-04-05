@@ -1,3 +1,4 @@
+import 'package:eco_quiz/util/score.dart';
 import 'package:eco_quiz/util/size.dart';
 import 'package:eco_quiz/util/tes.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class HasilTesPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(12.0),
                 child: Text(
                   "Quiz Result :",
                   style: TextStyle(
@@ -36,10 +37,10 @@ class HasilTesPage extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 0.5*width,
-                width: 0.5*width,
+                height: 0.6*width,
+                width: 0.6*width,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(100.0)),
+                  borderRadius: BorderRadius.all(Radius.circular(200.0)),
                   border: Border.all(
                     width: width*0.03,
                     color: Colors.blue
@@ -48,9 +49,65 @@ class HasilTesPage extends StatelessWidget {
                 child: Center(
                   child: Text(
                     score.toString(),
-                    
+                    style: TextStyle(
+                      fontSize: width*0.275,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.green[400]
+                    ),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 0.02*height,
+              ),
+              RaisedButton(
+                color: Colors.blue,
+                child: Container(
+                  width: width*0.7,
+                  height: height*0.1,
+                  child: Center(
+                    child: Text(
+                      "Home",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: width*0.1,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                elevation: 10.0,
+                onPressed: () {
+                  scoreHistory.add([score,tesName]);
+                  Navigator.of(context).popUntil(ModalRoute.withName("/"));
+                }
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom:height*0.05)
+              ),
+              RaisedButton(
+                color: Colors.red[600],
+                child: Container(
+                  width: width*0.7,
+                  height: height*0.1,
+                  child: Center(
+                    child: Text(
+                      "Scoreboard",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: width*0.1,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                elevation: 10.0,
+                onPressed: () {
+                  scoreHistory.add([score,tesName]);
+                  Navigator.of(context).pushNamedAndRemoveUntil("/hasil", ModalRoute.withName("/"));
+                },
               ),
             ],
           ),

@@ -14,9 +14,9 @@ class HomePage extends StatelessWidget {
       appBar:appBar(context,"EkoQuiz",false),
       body: ListView(
         children: <Widget>[
-          menuButton(0.3, "Pembelajaran", "/menu_pembelajaran", Colors.yellow[600], Icons.desktop_windows, context),
-          menuButton(0.3, "Tes", "/daftar_tes", Colors.greenAccent[400],Icons.edit, context),
-          menuButton(0.3, "Hasil", "/hasil", Colors.red[600],Icons.content_paste, context),
+          menuButton(0.3, "Pembelajaran", "/menu_pembelajaran", Icons.desktop_windows,'assets/img/1.jpg', context),
+          menuButton(0.3, "Tes", "/daftar_tes", Icons.edit,'assets/img/2.jpg', context),
+          menuButton(0.3, "Hasil", "/hasil", Icons.content_paste,'assets/img/3.jpeg', context),
         ],
       ),
     );

@@ -46,7 +46,9 @@ flutter:
   - assets/video/beauty_cutted_1.mp4
   - assets/video/beauty_cutted_2.mp4
   - assets/video/beauty_cutted_3.mp4
-
+  - assets/img/1.jpg
+  - assets/img/2.jpg
+  - assets/img/3.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

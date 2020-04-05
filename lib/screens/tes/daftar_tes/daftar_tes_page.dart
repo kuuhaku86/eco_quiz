@@ -12,16 +12,16 @@ class DaftarTes extends StatefulWidget {
 
 class _DaftarTesState extends State<DaftarTes> {
     List<ListClass> list = [
-    ListClass(name: "Tes 1", route: "/tes", icon: Icons.edit, videoNum: 0),
-    ListClass(name: "Tes 2", route: "/tes", icon: Icons.edit, videoNum: 0),
-    ListClass(name: "Tes 3", route: "/tes", icon: Icons.edit, videoNum: 0),
-    ListClass(name: "Tes 4", route: "/tes", icon: Icons.edit, videoNum: 0),
-    ListClass(name: "Tes 5", route: "/tes", icon: Icons.edit, videoNum: 0),
-    ListClass(name: "Tes 6", route: "/tes", icon: Icons.edit, videoNum: 0),
-    ListClass(name: "Tes 7", route: "/tes", icon: Icons.edit, videoNum: 0),
-    ListClass(name: "Tes 8", route: "/tes", icon: Icons.edit, videoNum: 0),
-    ListClass(name: "Tes 9", route: "/tes", icon: Icons.edit, videoNum: 0),
-    ListClass(name: "Tes 10", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 1", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 2", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 3", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 4", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 5", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 6", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 7", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 8", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 9", route: "/tes", icon: Icons.edit, videoNum: 0),
+    ListClass(name: "Course 10", route: "/tes", icon: Icons.edit, videoNum: 0),
   ];
 
   @override
