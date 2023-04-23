@@ -1,10 +1,10 @@
-import 'package:eco_quiz/util/list_class.dart';
+import 'package:eco_quiz/utils/list_class.dart';
 import 'package:eco_quiz/widgets/app_bar.dart';
 import 'package:eco_quiz/widgets/list_card.dart';
 import 'package:flutter/material.dart';
 
 class MenuPembelajaranPage extends StatefulWidget {
-  MenuPembelajaranPage({Key key}) : super(key: key);
+  MenuPembelajaranPage({Key? key}) : super(key: key);
 
   @override
   _MenuPembelajaranPageState createState() => _MenuPembelajaranPageState();
@@ -27,7 +27,7 @@ class _MenuPembelajaranPageState extends State<MenuPembelajaranPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context,"Pembelajaran",true),
+      appBar: appBar(context,"Pembelajaran",true) as PreferredSizeWidget?,
       backgroundColor: Colors.grey[300],
       body: ListView.builder(
         itemCount: 10,

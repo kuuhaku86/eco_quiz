@@ -1,10 +1,10 @@
-import 'package:eco_quiz/util/list_class.dart';
+import 'package:eco_quiz/utils/list_class.dart';
 import 'package:eco_quiz/widgets/app_bar.dart';
 import 'package:eco_quiz/widgets/list_card.dart';
 import 'package:flutter/material.dart';
 
 class DaftarTes extends StatefulWidget {
-  const DaftarTes({Key key}) : super(key: key);
+  const DaftarTes({Key? key}) : super(key: key);
 
   @override
   _DaftarTesState createState() => _DaftarTesState();
@@ -27,7 +27,7 @@ class _DaftarTesState extends State<DaftarTes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context, "Tes", true),
+      appBar: appBar(context, "Tes", true) as PreferredSizeWidget?,
       backgroundColor: Colors.grey[300],
       body: ListView.builder(
         itemCount: 10,

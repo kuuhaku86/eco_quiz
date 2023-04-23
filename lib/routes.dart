@@ -1,4 +1,4 @@
-import 'package:eco_quiz/screens/hasil/hasil_page.dart';
+import 'package:eco_quiz/screens/result/result_page.dart';
 import 'package:eco_quiz/screens/home/home_page.dart';
 import 'package:eco_quiz/screens/pembelajaran/akhir_pembelajaran/akhir_pembelajaran_page.dart';
 import 'package:eco_quiz/screens/pembelajaran/menu_pembelajaran/menu_pembelajaran_page.dart';

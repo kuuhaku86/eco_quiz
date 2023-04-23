@@ -1,4 +1,4 @@
-import 'package:eco_quiz/util/size.dart';
+import 'package:eco_quiz/utils/size.dart';
 import 'package:flutter/material.dart';
 
 Widget menuButton(double heightPercentage, String name, String route, IconData icon,String image, BuildContext context ) {
@@ -21,17 +21,17 @@ Widget menuButton(double heightPercentage, String name, String route, IconData i
                 Icon(
                   icon, 
                   color: Colors.black54,
-                  size: 0.2115*width,
+                  size: 0.2115*width!,
                 ),
                 Icon(
                   icon,
                   color: Colors.white,
-                  size: 0.2*width,
+                  size: 0.2*width!,
                 ),
               ],
             ),
             SizedBox(
-              width: 0.05*width
+              width: 0.05*width!
             )
             ,
             Text(
@@ -39,7 +39,7 @@ Widget menuButton(double heightPercentage, String name, String route, IconData i
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 0.1*width,
+                fontSize: 0.1*width!,
                 fontWeight: FontWeight.w700,
                 shadows: [
                   Shadow(

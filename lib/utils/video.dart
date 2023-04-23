@@ -1,4 +1,4 @@
-int currentCourse,currentVideo;
+int? currentCourse,currentVideo;
 
 List listVideo = [
   ["assets/video/beauty_cutted_1.mp4",
