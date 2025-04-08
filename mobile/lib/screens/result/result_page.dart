@@ -4,7 +4,7 @@ import 'package:eco_quiz/widgets/list_score.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatefulWidget {
-  const ResultPage({Key? key}) : super(key: key);
+  const ResultPage({super.key});
   static final String route = "/result_page";
 
   @override

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 class LearningVideoPage extends StatefulWidget {
-  const LearningVideoPage({Key? key}) : super(key: key);
+  const LearningVideoPage({super.key});
   static final String route = "/learning_video_page";
 
   @override

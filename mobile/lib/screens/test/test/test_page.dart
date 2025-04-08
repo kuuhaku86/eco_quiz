@@ -4,7 +4,7 @@ import 'package:eco_quiz/widgets/list_jawaban.dart';
 import 'package:flutter/material.dart';
 
 class TestPage extends StatelessWidget {
-  const TestPage({Key? key}) : super(key: key);
+  const TestPage({super.key});
   static final String route = "/test_page";
 
   @override

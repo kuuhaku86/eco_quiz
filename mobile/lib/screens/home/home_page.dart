@@ -5,7 +5,7 @@ import 'package:eco_quiz/widgets/menu_button.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
   static final String route = "/";
 
   @override

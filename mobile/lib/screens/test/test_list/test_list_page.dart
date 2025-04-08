@@ -5,7 +5,7 @@ import 'package:eco_quiz/widgets/list_card.dart';
 import 'package:flutter/material.dart';
 
 class TestListPage extends StatefulWidget {
-  const TestListPage({Key? key}) : super(key: key);
+  const TestListPage({super.key});
   static final String route = "/test_list_page";
 
   @override

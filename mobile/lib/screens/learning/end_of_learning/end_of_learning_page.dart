@@ -3,7 +3,7 @@ import 'package:eco_quiz/screens/test/test/test_page.dart';
 import 'package:flutter/material.dart';
 
 class EndOfLearningPage extends StatelessWidget {
-  const EndOfLearningPage({Key? key}) : super(key: key);
+  const EndOfLearningPage({super.key});
   static final String route = "/end_of_learning_page";
 
   @override
@@ -32,10 +32,10 @@ class EndOfLearningPage extends StatelessWidget {
               padding: EdgeInsets.only(bottom: mediaQuerySize.height * 0.05)),
           ElevatedButton(
               style: ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(Colors.blue),
-                elevation: MaterialStatePropertyAll(10.0),
+                backgroundColor: WidgetStatePropertyAll(Colors.blue),
+                elevation: WidgetStatePropertyAll(10.0),
               ),
-              child: Container(
+              child: SizedBox(
                 width: mediaQuerySize.width * 0.7,
                 height: mediaQuerySize.height * 0.1,
                 child: Center(
@@ -58,10 +58,10 @@ class EndOfLearningPage extends StatelessWidget {
               padding: EdgeInsets.only(bottom: mediaQuerySize.height * 0.05)),
           ElevatedButton(
             style: ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(Colors.red[600]),
-              elevation: MaterialStatePropertyAll(10.0),
+              backgroundColor: WidgetStatePropertyAll(Colors.red[600]),
+              elevation: WidgetStatePropertyAll(10.0),
             ),
-            child: Container(
+            child: SizedBox(
               width: mediaQuerySize.width * 0.7,
               height: mediaQuerySize.height * 0.1,
               child: Center(

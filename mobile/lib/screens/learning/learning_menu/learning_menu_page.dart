@@ -5,7 +5,7 @@ import 'package:eco_quiz/widgets/list_card.dart';
 import 'package:flutter/material.dart';
 
 class LearningMenuPage extends StatefulWidget {
-  LearningMenuPage({Key? key}) : super(key: key);
+  const LearningMenuPage({super.key});
   static final String route = "/learning_menu_page";
 
   @override

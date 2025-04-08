@@ -5,7 +5,7 @@ import 'package:eco_quiz/utils/tes.dart';
 import 'package:flutter/material.dart';
 
 class TestResultPage extends StatelessWidget {
-  const TestResultPage({Key? key}) : super(key: key);
+  const TestResultPage({super.key});
   static final String route = "/test_result_page";
 
   @override
@@ -60,10 +60,10 @@ class TestResultPage extends StatelessWidget {
               ),
               ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.blue),
-                    elevation: MaterialStatePropertyAll(10.0),
+                    backgroundColor: WidgetStatePropertyAll(Colors.blue),
+                    elevation: WidgetStatePropertyAll(10.0),
                   ),
-                  child: Container(
+                  child: SizedBox(
                     width: mediaSizeQuery.width * 0.7,
                     height: mediaSizeQuery.height * 0.1,
                     child: Center(
@@ -88,9 +88,9 @@ class TestResultPage extends StatelessWidget {
                       EdgeInsets.only(bottom: mediaSizeQuery.height * 0.05)),
               ElevatedButton(
                 style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.red[600]),
-                    elevation: MaterialStatePropertyAll(10.0)),
-                child: Container(
+                    backgroundColor: WidgetStatePropertyAll(Colors.red[600]),
+                    elevation: WidgetStatePropertyAll(10.0)),
+                child: SizedBox(
                   width: mediaSizeQuery.width * 0.7,
                   height: mediaSizeQuery.height * 0.1,
                   child: Center(

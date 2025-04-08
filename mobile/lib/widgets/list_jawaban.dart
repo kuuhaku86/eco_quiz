@@ -13,7 +13,7 @@ Widget listJawaban(BuildContext context, String jawab, String kunci) {
       child: Card(
         shape: StadiumBorder(
             side: BorderSide(color: Colors.grey[300]!, width: 3.0)),
-        child: Container(
+        child: SizedBox(
           width: 0.7 * mediaQuerySize.width,
           height: 0.09 * mediaQuerySize.height,
           child: Center(
