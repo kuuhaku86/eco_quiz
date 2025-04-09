@@ -18,7 +18,7 @@ class EndOfLearningPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Center(
               child: Text(
-                "Pembelajaran Selesai!!!\nLanjut Tes?",
+                "Learning Done!!!\nContinue to Test?",
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: mediaQuerySize.width * 0.12,
@@ -29,36 +29,11 @@ class EndOfLearningPage extends StatelessWidget {
             ),
           ),
           Padding(
-              padding: EdgeInsets.only(bottom: mediaQuerySize.height * 0.05)),
-          ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(Colors.blue),
-                elevation: WidgetStatePropertyAll(10.0),
-              ),
-              child: SizedBox(
-                width: mediaQuerySize.width * 0.7,
-                height: mediaQuerySize.height * 0.1,
-                child: Center(
-                  child: Text(
-                    "Ya",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: mediaQuerySize.width * 0.1,
-                      fontWeight: FontWeight.w800,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ),
-              onPressed: () {
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                    TestPage.route, ModalRoute.withName(HomePage.route));
-              }),
-          Padding(
-              padding: EdgeInsets.only(bottom: mediaQuerySize.height * 0.05)),
+            padding: EdgeInsets.only(bottom: mediaQuerySize.height * 0.05),
+          ),
           ElevatedButton(
             style: ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll(Colors.red[600]),
+              backgroundColor: WidgetStatePropertyAll(Colors.blue),
               elevation: WidgetStatePropertyAll(10.0),
             ),
             child: SizedBox(
@@ -66,7 +41,7 @@ class EndOfLearningPage extends StatelessWidget {
               height: mediaQuerySize.height * 0.1,
               child: Center(
                 child: Text(
-                  "Tidak",
+                  "Yes",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: mediaQuerySize.width * 0.1,
@@ -77,8 +52,39 @@ class EndOfLearningPage extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              Navigator.of(context)
-                  .popUntil(ModalRoute.withName(HomePage.route));
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                TestPage.route,
+                ModalRoute.withName(HomePage.route),
+              );
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(bottom: mediaQuerySize.height * 0.05),
+          ),
+          ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: WidgetStatePropertyAll(Colors.red[600]),
+              elevation: WidgetStatePropertyAll(10.0),
+            ),
+            child: SizedBox(
+              width: mediaQuerySize.width * 0.7,
+              height: mediaQuerySize.height * 0.1,
+              child: Center(
+                child: Text(
+                  "No",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: mediaQuerySize.width * 0.1,
+                    fontWeight: FontWeight.w800,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).popUntil(ModalRoute.withName(HomePage.route));
             },
           ),
         ],

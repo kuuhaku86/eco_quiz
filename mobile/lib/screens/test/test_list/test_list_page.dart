@@ -15,43 +15,40 @@ class TestListPage extends StatefulWidget {
 class _TestListPageState extends State<TestListPage> {
   List<ListClass> list = [
     ListClass(
-        name: "Course 1", route: TestPage.route, icon: Icons.edit, videoNum: 0),
+      name: "Test About Numbers",
+      route: TestPage.route,
+      icon: Icons.edit,
+      courseNum: 0,
+    ),
     ListClass(
-        name: "Course 2", route: TestPage.route, icon: Icons.edit, videoNum: 0),
+      name: "Test About Animals",
+      route: TestPage.route,
+      icon: Icons.edit,
+      courseNum: 1,
+    ),
     ListClass(
-        name: "Course 3", route: TestPage.route, icon: Icons.edit, videoNum: 0),
-    ListClass(
-        name: "Course 4", route: TestPage.route, icon: Icons.edit, videoNum: 0),
-    ListClass(
-        name: "Course 5", route: TestPage.route, icon: Icons.edit, videoNum: 0),
-    ListClass(
-        name: "Course 6", route: TestPage.route, icon: Icons.edit, videoNum: 0),
-    ListClass(
-        name: "Course 7", route: TestPage.route, icon: Icons.edit, videoNum: 0),
-    ListClass(
-        name: "Course 8", route: TestPage.route, icon: Icons.edit, videoNum: 0),
-    ListClass(
-        name: "Course 9", route: TestPage.route, icon: Icons.edit, videoNum: 0),
-    ListClass(
-        name: "Course 10",
-        route: TestPage.route,
-        icon: Icons.edit,
-        videoNum: 0),
+      name: "Test About History",
+      route: TestPage.route,
+      icon: Icons.edit,
+      courseNum: 0,
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context, "Tes", true) as PreferredSizeWidget,
+      appBar: appBar(context, "Test", true) as PreferredSizeWidget,
       backgroundColor: Colors.grey[300],
       body: ListView.builder(
-        itemCount: 10,
-        itemBuilder: (BuildContext context, int index) => listCard(
-            list[index].name,
-            list[index].route,
-            list[index].icon,
-            list[index].videoNum,
-            context),
+        itemCount: 3,
+        itemBuilder:
+            (BuildContext context, int index) => listCard(
+              list[index].name,
+              list[index].route,
+              list[index].icon,
+              list[index].courseNum,
+              context,
+            ),
       ),
     );
   }

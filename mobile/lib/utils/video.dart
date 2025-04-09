@@ -1,9 +1,19 @@
 int currentCourse = 0, currentVideo = 0;
 
-List listVideo = [
+List listVideos = [
   [
-    "assets/video/beauty_cutted_1.mp4",
-    "assets/video/beauty_cutted_2.mp4",
-    "assets/video/beauty_cutted_3.mp4",
-  ]
+    "assets/video/multiplication_part1.mp4",
+    "assets/video/multiplication_part2.mp4",
+    "assets/video/multiplication_part3.mp4",
+  ],
+  [
+    "assets/video/reptiles_part1.mp4",
+    "assets/video/reptiles_part2.mp4",
+    "assets/video/reptiles_part3.mp4",
+  ],
+  [
+    "assets/video/cleopatra_part1.mp4",
+    "assets/video/cleopatra_part2.mp4",
+    "assets/video/cleopatra_part3.mp4",
+  ],
 ];
