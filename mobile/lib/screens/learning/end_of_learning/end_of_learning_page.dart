@@ -21,7 +21,7 @@ class EndOfLearningPage extends StatelessWidget {
                 "Learning Done!!!\nContinue to Test?",
                 style: TextStyle(
                   color: Colors.grey,
-                  fontSize: mediaQuerySize.width * 0.12,
+                  fontSize: mediaQuerySize.width * 0.07,
                   fontWeight: FontWeight.w800,
                 ),
                 textAlign: TextAlign.center,
@@ -37,14 +37,14 @@ class EndOfLearningPage extends StatelessWidget {
               elevation: WidgetStatePropertyAll(10.0),
             ),
             child: SizedBox(
-              width: mediaQuerySize.width * 0.7,
-              height: mediaQuerySize.height * 0.1,
+              width: mediaQuerySize.width * 0.5,
+              height: mediaQuerySize.height * 0.075,
               child: Center(
                 child: Text(
                   "Yes",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: mediaQuerySize.width * 0.1,
+                    fontSize: mediaQuerySize.width * 0.07,
                     fontWeight: FontWeight.w800,
                   ),
                   textAlign: TextAlign.center,
@@ -67,14 +67,14 @@ class EndOfLearningPage extends StatelessWidget {
               elevation: WidgetStatePropertyAll(10.0),
             ),
             child: SizedBox(
-              width: mediaQuerySize.width * 0.7,
-              height: mediaQuerySize.height * 0.1,
+              width: mediaQuerySize.width * 0.5,
+              height: mediaQuerySize.height * 0.075,
               child: Center(
                 child: Text(
                   "No",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: mediaQuerySize.width * 0.1,
+                    fontSize: mediaQuerySize.width * 0.07,
                     fontWeight: FontWeight.w800,
                   ),
                   textAlign: TextAlign.center,

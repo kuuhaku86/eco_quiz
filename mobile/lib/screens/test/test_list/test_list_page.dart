@@ -30,7 +30,7 @@ class _TestListPageState extends State<TestListPage> {
       name: "Test About History",
       route: TestPage.route,
       icon: Icons.edit,
-      courseNum: 0,
+      courseNum: 2,
     ),
   ];
 

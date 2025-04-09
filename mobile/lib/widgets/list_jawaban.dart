@@ -12,7 +12,8 @@ Widget listJawaban(BuildContext context, String jawab, String kunci) {
       padding: const EdgeInsets.only(top: 10.0),
       child: Card(
         shape: StadiumBorder(
-            side: BorderSide(color: Colors.grey[300]!, width: 3.0)),
+          side: BorderSide(color: Colors.grey[300]!, width: 3.0),
+        ),
         child: SizedBox(
           width: 0.7 * mediaQuerySize.width,
           height: 0.09 * mediaQuerySize.height,
@@ -21,8 +22,9 @@ Widget listJawaban(BuildContext context, String jawab, String kunci) {
               jawab,
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: mediaQuerySize.width * 0.07,
-                  fontWeight: FontWeight.w600),
+                fontSize: mediaQuerySize.width * 0.05,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         ),
