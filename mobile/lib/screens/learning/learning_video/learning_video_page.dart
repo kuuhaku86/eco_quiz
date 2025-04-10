@@ -1,5 +1,6 @@
 import 'package:eco_quiz/screens/learning/end_of_learning/end_of_learning_page.dart';
 import 'package:eco_quiz/utils/video.dart';
+import 'package:eco_quiz/utils/text.dart';
 import 'package:eco_quiz/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
@@ -49,7 +50,7 @@ class _LearningVideoPageState extends State<LearningVideoPage> {
               ],
             ),
           ),
-          Container(height: mediaQuerySize.height * 0.05),
+          Container(height: mediaQuerySize.height * 0.02),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -95,6 +96,19 @@ class _LearningVideoPageState extends State<LearningVideoPage> {
                 ),
               ),
             ],
+          ),
+          Container(height: mediaQuerySize.height * 0.02),
+          Container(
+            height: mediaQuerySize.height * 0.5,
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: SingleChildScrollView(
+                child: Text(
+                  style: TextStyle(fontSize: mediaQuerySize.height * 0.019),
+                  listText[currentCourse],
+                ),
+              ),
+            ),
           ),
         ],
       ),
