@@ -14,7 +14,6 @@ class LearningVideoPage extends StatefulWidget {
 
 class _LearningVideoPageState extends State<LearningVideoPage> {
   late VideoPlayerController _videoController;
-  bool isStart = true;
 
   @override
   void initState() {
@@ -23,6 +22,7 @@ class _LearningVideoPageState extends State<LearningVideoPage> {
       _videoController = VideoPlayerController.asset(
         listVideos[currentCourse][currentVideo],
       );
+      _videoController.setLooping(true);
       _videoController.initialize();
       _videoController.play();
     });
@@ -40,7 +40,14 @@ class _LearningVideoPageState extends State<LearningVideoPage> {
         children: [
           AspectRatio(
             aspectRatio: mediaQuerySize.width / (0.3 * mediaQuerySize.height),
-            child: VideoPlayer(_videoController),
+            child: Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                VideoPlayer(_videoController),
+                _ControlsOverlay(controller: _videoController),
+                VideoProgressIndicator(_videoController, allowScrubbing: true),
+              ],
+            ),
           ),
           Container(height: mediaQuerySize.height * 0.05),
           Row(
@@ -63,24 +70,6 @@ class _LearningVideoPageState extends State<LearningVideoPage> {
                           },
                         )
                         : Container(width: 0.1 * mediaQuerySize.height),
-              ),
-              Expanded(
-                child: GestureDetector(
-                  child: Icon(
-                    _videoController.value.isPlaying || isStart
-                        ? Icons.pause
-                        : Icons.play_arrow,
-                    size: 0.05 * mediaQuerySize.height,
-                  ),
-                  onTap: () {
-                    setState(() {
-                      isStart = false;
-                      _videoController.value.isPlaying
-                          ? _videoController.pause()
-                          : _videoController.play();
-                    });
-                  },
-                ),
               ),
               Expanded(
                 child: GestureDetector(
@@ -117,5 +106,91 @@ class _LearningVideoPageState extends State<LearningVideoPage> {
     _videoController.pause();
     super.dispose();
     _videoController.dispose();
+  }
+}
+
+class _ControlsOverlay extends StatefulWidget {
+  const _ControlsOverlay({required this.controller});
+
+  final VideoPlayerController controller;
+
+  @override
+  State<_ControlsOverlay> createState() => _ControlsOverlayState();
+}
+
+class _ControlsOverlayState extends State<_ControlsOverlay> {
+  bool isStart = true;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  static const List<double> _examplePlaybackRates = <double>[
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    5.0,
+    10.0,
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        widget.controller.value.isPlaying || isStart
+            ? const SizedBox.shrink()
+            : const ColoredBox(
+              color: Colors.black26,
+              child: Center(
+                child: Icon(
+                  Icons.play_arrow,
+                  color: Colors.white,
+                  size: 100.0,
+                  semanticLabel: 'Play',
+                ),
+              ),
+            ),
+        GestureDetector(
+          onTap: () {
+            setState(() {
+              isStart = false;
+            });
+            widget.controller.value.isPlaying
+                ? widget.controller.pause()
+                : widget.controller.play();
+          },
+        ),
+        Align(
+          alignment: Alignment.topRight,
+          child: PopupMenuButton<double>(
+            initialValue: widget.controller.value.playbackSpeed,
+            tooltip: 'Playback speed',
+            onSelected: (double speed) {
+              widget.controller.setPlaybackSpeed(speed);
+            },
+            itemBuilder: (BuildContext context) {
+              return <PopupMenuItem<double>>[
+                for (final double speed in _examplePlaybackRates)
+                  PopupMenuItem<double>(value: speed, child: Text('${speed}x')),
+              ];
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                // Using less vertical padding as the text is also longer
+                // horizontally, so it feels like it would need more spacing
+                // horizontally (matching the aspect ratio of the video).
+                vertical: 12,
+                horizontal: 16,
+              ),
+              child: Text('${widget.controller.value.playbackSpeed}x'),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
