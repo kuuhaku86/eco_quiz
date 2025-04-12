@@ -18,7 +18,7 @@ class _ResultPageState extends State<ResultPage> {
   @override
   void initState() {
     super.initState();
-    if (scoreHistory.length > 0) {
+    if (scoreHistory.isNotEmpty) {
       Iterable inReverse = scoreHistory.reversed;
       scoreSementara = inReverse.toList();
       length = scoreSementara.length;
@@ -29,12 +29,17 @@ class _ResultPageState extends State<ResultPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(context, "Scoreboard", true) as PreferredSizeWidget?,
-      body: scoreHistory.length > 0
-          ? ListView.builder(
-              itemCount: length,
-              itemBuilder: (BuildContext context, int index) =>
-                  listScore(scoreSementara[index][1], scoreSementara[index][0]))
-          : Container(),
+      body:
+          scoreHistory.isNotEmpty
+              ? ListView.builder(
+                itemCount: length,
+                itemBuilder:
+                    (BuildContext context, int index) => listScore(
+                      scoreSementara[index][1],
+                      scoreSementara[index][0],
+                    ),
+              )
+              : Container(),
       backgroundColor: Colors.grey[300],
     );
   }

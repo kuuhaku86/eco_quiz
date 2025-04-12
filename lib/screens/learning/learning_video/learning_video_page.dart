@@ -35,7 +35,7 @@ class _LearningVideoPageState extends State<LearningVideoPage> {
 
     return Scaffold(
       appBar:
-          appBar(context, "Video " + (currentVideo + 1).toString(), true)
+          appBar(context, "Video ${currentVideo + 1}", true)
               as PreferredSizeWidget,
       body: Column(
         children: [
@@ -98,7 +98,7 @@ class _LearningVideoPageState extends State<LearningVideoPage> {
             ],
           ),
           Container(height: mediaQuerySize.height * 0.02),
-          Container(
+          SizedBox(
             height: mediaQuerySize.height * 0.5,
             child: Padding(
               padding: const EdgeInsets.all(12.0),

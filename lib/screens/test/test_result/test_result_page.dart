@@ -79,7 +79,6 @@ class TestResultPage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  scoreHistory.add([score, tesName]);
                   Navigator.of(
                     context,
                   ).popUntil(ModalRoute.withName(HomePage.route));
@@ -109,7 +108,6 @@ class TestResultPage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  scoreHistory.add([score, tesName]);
                   Navigator.of(context).pushNamedAndRemoveUntil(
                     ResultPage.route,
                     ModalRoute.withName(HomePage.route),

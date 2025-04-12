@@ -2,6 +2,7 @@ import 'package:eco_quiz/screens/test/test/test_page.dart';
 import 'package:eco_quiz/screens/test/test_result/test_result_page.dart';
 import 'package:eco_quiz/utils/tes.dart';
 import 'package:eco_quiz/utils/video.dart';
+import 'package:eco_quiz/utils/score.dart';
 import 'package:flutter/material.dart';
 
 Widget listJawaban(BuildContext context, String jawab, String kunci) {
@@ -36,6 +37,7 @@ Widget listJawaban(BuildContext context, String jawab, String kunci) {
       }
 
       if (numTes == (soalJawaban[currentCourse].length - 2)) {
+        scoreHistory.add([score, tesName]);
         Navigator.pushNamed(context, TestResultPage.route);
       } else {
         numTes++;
